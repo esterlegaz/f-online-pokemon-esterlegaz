@@ -8,8 +8,7 @@ import { Pokemon } from './../pokemon';
   styleUrls: ['./pokemon-list.component.scss'],
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: Pokemon[];
-  returnedPokemon = [];
+  pokemons: Pokemon[] = [];
   constructor(private pokemonService: PokemonService) { }
   ngOnInit() {
     this.getPokemons();
@@ -24,7 +23,6 @@ export class PokemonListComponent implements OnInit {
               this.pokemons.push(pokemon);
             })
         })
-        this.pokemons = this.returnedPokemon;
       });
   }
 }
