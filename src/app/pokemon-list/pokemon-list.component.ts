@@ -23,13 +23,3 @@ export class PokemonListComponent implements OnInit {
     })
   }
 }
-
-//esto sí funciona puesto en vez de pokemons: Pokemon[]
-// pokemons: Pokemon[] = [{
-//   gender: 'woman',
-//   name: 'Bla'
-// },
-// {
-//   gender: 'man',
-//   name: 'Ble'
-// }];
