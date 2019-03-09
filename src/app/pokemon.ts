@@ -1,4 +1,4 @@
 export class Pokemon {
-    gender: string;
+    order: number;
     name: string;
   }

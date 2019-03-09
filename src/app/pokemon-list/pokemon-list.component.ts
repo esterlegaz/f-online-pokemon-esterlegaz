@@ -19,17 +19,7 @@ export class PokemonListComponent implements OnInit {
     this.pokemonService.fetchCharacters()
     .then(data => {
       return this.pokemons=
-      data;
+      data.results;
     })
   }
 }
-
-//esto sí funciona puesto en vez de pokemons: Pokemon[]
-// pokemons: Pokemon[] = [{
-//   gender: 'woman',
-//   name: 'Bla'
-// },
-// {
-//   gender: 'man',
-//   name: 'Ble'
-// }];
