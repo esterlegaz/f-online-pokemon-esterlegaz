@@ -1,4 +1,4 @@
-##Formación online prueba técnica 1
+# Formación online prueba técnica 1
 Se desarrollará una sencilla webapp usando React y el API de pokemon PokeAPI. 
 
 La app debe tener las siguientes características:
