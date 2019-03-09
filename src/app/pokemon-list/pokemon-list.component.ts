@@ -18,7 +18,6 @@ export class PokemonListComponent implements OnInit {
     console.log('Funciono');
     this.pokemonService.fetchCharacters()
     .then(data => {
-      console.log(data);
       return this.pokemons=
       data;
     })
