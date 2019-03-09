@@ -9,17 +9,31 @@ import { Pokemon } from './../pokemon';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: Pokemon[];
+  returnedPokemon = [];
   constructor(private pokemonService: PokemonService) { }
-
   ngOnInit() {
     this.getPokemons();
   }
   getPokemons() {
-    console.log('Funciono');
     this.pokemonService.fetchCharacters()
-    .then(data => {
-      return this.pokemons=
-      data.results;
-    })
+      .then(data => {
+        data.results.map(pokemon => {
+          fetch(pokemon.url)
+            .then(response => response.json())
+            .then(pokemon => {
+              this.pokemons.push(pokemon);
+            })
+        })
+        this.pokemons = this.returnedPokemon;
+      });
   }
 }
+
+// getPokemons() {
+//   this.pokemonService.fetchCharacters()
+//   .then(data => {
+//     console.log(data.results.length);
+//     return this.pokemons=
+//     data.results;
+//   });
+// }

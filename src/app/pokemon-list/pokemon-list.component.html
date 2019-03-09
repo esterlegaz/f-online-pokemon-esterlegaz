@@ -1,7 +1,9 @@
 <h1>Pokemon list</h1>
 <ul class="pokemons">
   <li *ngFor="let pokemon of pokemons">
-    <p>{{pokemon.url}}</p> 
+    <p>{{pokemon.id}}</p> 
     <p>{{pokemon.name}}</p> 
+    <p>{{pokemon.sprites.back_default}}</p> 
+    <p *ngFor="let pokemon of types">{{pokemon.types.type}}</p>
   </li>
 </ul>
