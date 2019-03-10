@@ -13,6 +13,7 @@ export class PokemonListComponent implements OnInit {
   ngOnInit() {
     this.getPokemons();
   }
+
   getPokemons() {
     this.pokemonService.fetchCharacters()
       .then(data => {
@@ -21,17 +22,14 @@ export class PokemonListComponent implements OnInit {
             .then(response => response.json())
             .then(pokemon => {
               this.pokemons.push(pokemon);
+              this.pokemons.sort(((a,b) => a.id - b.id));
             })
         })
       });
   }
-}
 
-// getPokemons() {
-//   this.pokemonService.fetchCharacters()
-//   .then(data => {
-//     console.log(data.results.length);
-//     return this.pokemons=
-//     data.results;
-//   });
-// }
+  // filterPokemons(inputValue) {
+  //   console.log(inputValue);
+  //   this.pokemons.filter(pokemon => pokemon.name.toUpperCase().includes(inputValue.toUpperCase()));
+  // }
+}

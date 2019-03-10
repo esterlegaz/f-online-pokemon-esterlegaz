@@ -1,7 +1,8 @@
 <ion-content overflow-scroll="true">
   <h1>Pokemon list</h1>
+  <input [(ngModel)]="searchText" placeholder="Buscar">
   <ul class="pokemons">
-    <li *ngFor="let pokemon of pokemons">
+    <li *ngFor="let pokemon of pokemons | filter: searchText">
       <p>{{pokemon.id}}</p>
       <p>{{pokemon.name}}</p>
       <div class="pokemon-img" [ngStyle]="{ 'background-image': 'url(' + pokemon.sprites.back_default + ')'}"></div>
