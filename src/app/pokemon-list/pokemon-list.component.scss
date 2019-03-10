@@ -1,4 +1,22 @@
 .pokemon-img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.pokemon__card{
+    width: 350px;
+    height: 350px;
+}
+
+.search-bar{
+    max-width: 500px;
+    margin: 0;
+}
+
+.item__title{
+    text-transform: capitalize;
+    font-size: 20px;
 }
