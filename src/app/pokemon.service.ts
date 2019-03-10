@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class PokemonService {
 
   constructor() { }
-  ENDPOINT = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+  ENDPOINT = 'https://pokeapi.co/api/v2/pokemon?limit=25';
   fetchCharacters = () => fetch(this.ENDPOINT)
   .then(response => response.json())
 }
