@@ -27,9 +27,4 @@ export class PokemonListComponent implements OnInit {
         })
       });
   }
-
-  // filterPokemons(inputValue) {
-  //   console.log(inputValue);
-  //   this.pokemons.filter(pokemon => pokemon.name.toUpperCase().includes(inputValue.toUpperCase()));
-  // }
 }
